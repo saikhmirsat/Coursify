@@ -26,7 +26,7 @@ export default function Login() {
       };
 
       try {
-        await fetch(`http://localhost:8080/users/login`, {
+        await fetch(`https://cute-pink-moth-kit.cyclic.cloud/users/login`, {
           method: "POST",
           body: JSON.stringify(obj),
           headers: {
@@ -66,7 +66,7 @@ export default function Login() {
       };
 
       try {
-        await fetch(`http://localhost:8080/recruiters/login`, {
+        await fetch(`https://cute-pink-moth-kit.cyclic.cloud/recruiters/login`, {
           method: "POST",
           body: JSON.stringify(obj),
           headers: {

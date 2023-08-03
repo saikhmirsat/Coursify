@@ -21,7 +21,7 @@ export default function PostJob() {
 
   const getData = async () => {
     setLoading(true);
-    await fetch(`http://localhost:8080/jobs/${user._id}`, {
+    await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobs/${user._id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ export default function PostJob() {
     };
     console.log(obj);
     try {
-      await fetch(`http://localhost:8080/jobs/add`, {
+      await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobs/add`, {
         method: "POST",
         body: JSON.stringify(obj),
         headers: {
@@ -96,7 +96,7 @@ export default function PostJob() {
   };
 
   const deletefunc = async (id) => {
-    await fetch(`http://localhost:8080/jobs/delete/${id}`, {
+    await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobs/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

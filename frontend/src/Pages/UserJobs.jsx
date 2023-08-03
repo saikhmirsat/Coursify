@@ -27,7 +27,7 @@ export default function UserJobs() {
   };
 
   const getData = async () => {
-    await fetch(`http://localhost:8080/jobs/`, {
+    await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobs/`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export default function UserJobs() {
   };
 
   const getDataForCheck = async () => {
-    await fetch(`http://localhost:8080/jobsapply/${user._id}`, {
+    await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobsapply/${user._id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export default function UserJobs() {
 
   const getPerticularJob = async (id) => {
     handleModalOpen();
-    await fetch(`http://localhost:8080/jobs/perticular/${id}`, {
+    await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobs/perticular/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export default function UserJobs() {
     try {
       // Fetch particular job data using the provided id
       const response = await fetch(
-        `http://localhost:8080/jobs/perticular/${id}`,
+        `https://cute-pink-moth-kit.cyclic.cloud/jobs/perticular/${id}`,
         {
           method: "GET",
           headers: {
@@ -109,7 +109,7 @@ export default function UserJobs() {
         jobData: jobData[0],
       };
       // Send a POST request with the jobData to the '/jobsapply/add' route
-      const postResponse = await fetch(`http://localhost:8080/jobsapply/add`, {
+      const postResponse = await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobsapply/add`, {
         method: "POST",
         body: JSON.stringify(obj),
         headers: {

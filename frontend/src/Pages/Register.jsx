@@ -163,7 +163,7 @@ export default function Register() {
       };
       console.log(obj);
       try {
-        await fetch(`http://localhost:8080/users/register`, {
+        await fetch(`https://cute-pink-moth-kit.cyclic.cloud/users/register`, {
           method: "POST",
           body: JSON.stringify(obj),
           headers: {
@@ -217,7 +217,7 @@ export default function Register() {
       };
 
       try {
-        await fetch(`http://localhost:8080/recruiters/register`, {
+        await fetch(`https://cute-pink-moth-kit.cyclic.cloud/recruiters/register`, {
           method: "POST",
           body: JSON.stringify(obj),
           headers: {

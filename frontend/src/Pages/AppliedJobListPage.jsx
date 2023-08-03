@@ -7,7 +7,7 @@ export default function AppliedJobListPage() {
   console.log(data);
 
   const getData = async () => {
-    await fetch(`http://localhost:8080/jobsapply/${user._id}`, {
+    await fetch(`https://cute-pink-moth-kit.cyclic.cloud/jobsapply/${user._id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
